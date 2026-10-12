@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class studentGradeCalculator {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        //ask student name
+        System.out.println("Enter your name: ");
+        String name = input.nextLine();
+
+        //ask subject grades
+        System.out.print("Grade 1: ");
+        double grade1 = input.nextDouble();
+
+        System.out.print("Grade 2: ");
+        double grade2 = input.nextDouble();
+
+        System.out.print("Grade 3: ");
+        double grade3 = input.nextDouble();
+
+        // Calculate the average
+        double average = (grade1 + grade2 + grade3) / 3;
+
+        // Check if the student passed
+        String remark;
+
+        // Check the grade
+        if (average >= 75) {
+            remark = "PASSED";
+        } else {
+            remark = "FAILED";
+        }
+
+        // Show the result
+        System.out.println("\n=== STUDENT GRADE ===");
+        System.out.println("Name: " + name);
+        System.out.println("Average: " + average);
+        System.out.println("Status: " + remark);
+    }
+}
+ 
